@@ -1,0 +1,105 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westeurope"
+        },
+        "vmName": {
+            "value": "SqlPfsClNode02"
+        },
+        "availabilitySetName": {
+            "value": "pfsSqlAvSet"
+        },
+        "createAvailabilitySet": {
+            "value": "No"
+        },
+        "adDomain": {
+            "value": "contoso.local"
+        },
+        "adminUsername": {
+            "value": "contosoadmin"
+        },
+        "adminPassword": {
+            "value": "Passw0rd.1"
+        },
+        "vnetName": {
+            "value": "vnet"
+        },
+        "subnetName": {
+            "value": "defaultSubnet"
+        },
+        "privateIp": {
+            "value": "dhcp"
+        },
+        "enableAcceleratedNetworking": {
+            "value": "Yes"
+        },
+        "enablePublicIP": {
+            "value": "No"
+        },
+        "dnsLabelPrefix": {
+            "value": ""
+        },
+        "asgIds": {
+            "value": []
+        },
+        "sqlVersion": {
+            "value": "SQL Server 2019 Developer (free) on Windows Server 2019"
+        },
+        "vmSize": {
+            "value": "Standard_DS12_v2"
+        },
+        "useAHBforWindows": {
+            "value": "No"
+        },
+        "timeZone": {
+            "value": "(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna"
+        },
+        "osDiskSuffix": {
+            "value": "OsDisk"
+        },
+        "osDiskStorageSku": {
+            "value": "Premium_LRS"
+        },
+        "AdditionalDiskSuffix": {
+            "value": "DataDisk"
+        },
+        "workloadType": {
+            "value": "OLTP"
+        },
+        "dataDiskStorageSKU": {
+            "value": "Premium_LRS"
+        },
+        "#ofDataDisks": {
+            "value": 0
+        },
+        "dataDisksSize": {
+            "value": 1023
+        },
+        "logDiskStorageSKU": {
+            "value": "Premium_LRS"
+        },
+        "#ofLogDisks": {
+            "value": 0
+        },
+        "logDisksSize": {
+            "value": 32
+        },
+        "#ofAdditionalDisks": {
+            "value": 0
+        },
+        "additionalDisksSize": {
+            "value": 32
+        },
+        "diagStorageAccountName": {
+            "value": ""
+        },
+        "prepareForHA": {
+            "value": "FCI"
+        },
+        "sqlRpInstallMode": {
+            "value": "LightWeight"
+        }
+    }
+}
