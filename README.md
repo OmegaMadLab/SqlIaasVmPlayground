@@ -13,3 +13,9 @@ Then, you can choose between:
 - **05-SingleVM.ps1** to deploy a standalone domain-joined SQL VM.
 
 All the deployments are based upon my [ARM template](https://github.com/OmegaMadLab/OptimizedSqlVm-v2), that leverage on SQL VM IaaS Provider and some custom PowerShell to deploy an optimized SQL Server VM.
+
+These demo scripts were used during the following sessions:
+
+**Global Azure Virtual 2020 - What's new on Azure IaaS for SQL VMs**  
+[Slide](https://www.slideshare.net/MarcoObinu/global-azure-virtual-2020-whats-new-on-azure-iaas-for-sql-vms)  
+[Video](https://youtu.be/7o80CJUtnh4)
