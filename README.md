@@ -19,3 +19,7 @@ These demo scripts were used during the following sessions:
 **Global Azure Virtual 2020 - What's new on Azure IaaS for SQL VMs**  
 [Slide](https://www.slideshare.net/MarcoObinu/global-azure-virtual-2020-whats-new-on-azure-iaas-for-sql-vms)  
 [Video](https://youtu.be/7o80CJUtnh4)
+
+**HomeGen - Azure VM 101**  
+[Slide](https://www.slideshare.net/MarcoObinu/azure-vm-101-homegen-by-cloudgen-verona)  
+[Video](https://youtu.be/C8v6c6EkJ9A)
