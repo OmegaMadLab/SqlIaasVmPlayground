@@ -28,17 +28,6 @@ $pfs = New-AzStorageShare `
 
 $pfs | Set-AzStorageShareQuota -Quota 2048
 
-$cmdKeyCommand = "cmd.exe /C `"cmdkey /add:```"$($fsSa.PrimaryEndpoints.File)```" /user:```"Azure\$($fsSa.StorageAccountName)```" /pass:```"$(($fsSa | Get-AzStorageAccountKey)[0].Value)```""
-
-Write-Host -ForegroundColor "Green" "UNC path of the file share:"
-Write-Host -ForegroundColor "Yellow" "\\$($pfs.Uri.Host)\$($pfs.Uri.LocalPath.Replace('/',''))"
-Write-Host ""
-Write-Host -ForegroundColor "Green" "Execute the following command on both cluster nodes, when connected as the SQL Server service account, to save the access key for the file share:"
-Write-Host -ForegroundColor "Yellow" $cmdKeyCommand
-
-
-$fsSa.StorageAccountName
-
 # Now, copy the content of the PFSFCI folder inside the first cluster node.
 # Then, from there,  execute the script name PFSFCI-GuestClusterConfig.ps1 to setup the cluster
 

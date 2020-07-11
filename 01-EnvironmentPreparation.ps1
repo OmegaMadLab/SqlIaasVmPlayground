@@ -22,7 +22,7 @@ $dcDeployment = New-AzResourceGroupDeployment -Name "DC" `
                     -TemplateUri "https://raw.githubusercontent.com/OmegaMadLab/LabTemplates/master/addc.json" `
                     -envPrefix "Demo" `
                     -vmName "DC" `
-                    -genericVmSize "Standard_F2s" `
+                    -genericVmSize "Standard_E4-2s_v4" `
                     -adminUserName $adminName `
                     -adminPassword $adminPwd `
                     -domainName $domainName `
@@ -32,6 +32,8 @@ $dcDeployment = New-AzResourceGroupDeployment -Name "DC" `
 $vnet = Get-AzVirtualNetwork -Name $vnetName -ResourceGroupName $rgName
 $vnet.DhcpOptions.DnsServers = $dcDeployment.Outputs.dcPrivateIp.Value
 $vnet | Set-AzVirtualNetwork
+
+Restart-AzVm -Name "Demo-DC" -resourceGroupName $rgName 
 
 # Create an ILB for clusters
 foreach($ilbName in $s2dIlbName, $pfsIlbName, $agIlbName) {

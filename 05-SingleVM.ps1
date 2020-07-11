@@ -4,4 +4,4 @@
 New-AzResourceGroupDeployment -Name "SingleVM" `
     -ResourceGroupName $rgName `
     -TemplateUri "https://raw.githubusercontent.com/OmegaMadLab/OptimizedSqlVm-v2/master/azuredeploy.json" `
-    -TemplateParameterFile ".\SingleVM\azuredeploy.parameters.singleVM.json" `
+    -TemplateParameterFile ".\SingleVM\azuredeploy.parameters.singleVM.json" 
