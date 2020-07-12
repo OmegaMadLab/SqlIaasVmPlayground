@@ -8,9 +8,9 @@ You can start deploying from the script **01-EnvironmentPreparation.ps1**: it pr
 
 Then, you can choose between:
 
-- **02-S2DFCI.ps1** to deploy a two-node SQL Failover Cluster Instance, with the storage layer based on Storage Spaces Direct. Databases are hosted on CSV volumes; data are replicated via S2D storage replica, between disks attached to each cluster node.
-- **03-PFSFCI.ps1** to deploy a two-node SQL Failover Cluster Instance, with the storage layer based on an Azure Premium File Share. Databases are hosted on the file share, accessible from both nodes.
-- **04-AlwaysOnAG.ps1** to deploy a two-node a cluster with an Always On Availability Group. Databases are hosted on the disks attached to each cluster node, and replica happens at the database level.
+- **02-AlwaysOnAG.ps1** to deploy a two-node a cluster with an Always On Availability Group. Databases are hosted on the disks attached to each cluster node, and replica happens at the database level.
+- **03-S2DFCI.ps1** to deploy a two-node SQL Failover Cluster Instance, with the storage layer based on Storage Spaces Direct. Databases are hosted on CSV volumes; data are replicated via S2D storage replica, between disks attached to each cluster node.
+- **04-PFSFCI.ps1** to deploy a two-node SQL Failover Cluster Instance, with the storage layer based on an Azure Premium File Share. Databases are hosted on the file share, accessible from both nodes.
 - **05-SingleVM.ps1** to deploy a standalone domain-joined SQL VM.
 - **06-SHDFCI.ps1** to deploy a two-node SQL Failover Cluster Instance, with the storage layer based on Azure Premium Shared Disks. Also, it avoids using the Azure Load Balancer to manage the clustered IPs, since it's using [Distributed Network Names](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/hadr-distributed-network-name-dnn-configure#rename-the-vnn) both at the cluster and SQL Server level.  
 Both these features are still in preview.  
