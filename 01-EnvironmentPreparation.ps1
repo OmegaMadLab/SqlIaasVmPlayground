@@ -22,7 +22,7 @@ $dcDeployment = New-AzResourceGroupDeployment -Name "DC" `
                     -TemplateUri "https://raw.githubusercontent.com/OmegaMadLab/LabTemplates/master/addc.json" `
                     -envPrefix "Demo" `
                     -vmName "DC" `
-                    -genericVmSize "Standard_E4-2s_v4" `
+                    -genericVmSize "Standard_F2s_v2" `
                     -adminUserName $adminName `
                     -adminPassword $adminPwd `
                     -domainName $domainName `
