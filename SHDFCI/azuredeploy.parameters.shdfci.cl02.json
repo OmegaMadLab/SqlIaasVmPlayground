@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "westcentralus"
+            "value": "westeurope"
         },
         "vmName": {
             "value": "SqlShdClNode02"
@@ -48,7 +48,7 @@
             "value": "SQL Server 2019 Developer (free) on Windows Server 2019"
         },
         "vmSize": {
-            "value": "Standard_E8-4ds_v4"
+            "value": "Standard_DS12_v2"
         },
         "useAHBforWindows": {
             "value": "No"

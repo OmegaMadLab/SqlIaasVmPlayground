@@ -1,19 +1,12 @@
-. .\00b-CommonVariables-WestCentralUS.ps1
+. .\00-CommonVariables.ps1
 
-. .\01b-EnvironmentPreparation-WestCentralUS.ps1
-
-# Create a PPG and an AvSet. Using FaultDomainCount=1 as per Shared Disks preview requirements
-$ppg = New-AzProximityPlacementGroup `
-   -Location $location `
-   -Name $ppgName `
-   -ResourceGroupName $rgName `
-   -ProximityPlacementGroupType Standard
+. .\01-EnvironmentPreparation.ps1
 
 $avSet = New-AzAvailabilitySet -Name $shdAvSetName `
             -ResourceGroupName $rgName `
             -Location $location `
-            -PlatformUpdateDomainCount 1 `
-            -PlatformFaultDomainCount 1 `
+            -PlatformUpdateDomainCount 3 `
+            -PlatformFaultDomainCount 3 `
             -Sku "Aligned" `
             -ProximityPlacementGroupId $ppg.Id
 

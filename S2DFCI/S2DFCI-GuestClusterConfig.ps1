@@ -2,6 +2,7 @@ $clusterName = 'DemoClS2DFCI'
 
 $ipAddr = '10.0.0.110'
 $probePort = '59990'
+### To be updated with your SA name!!! ###
 $witnessSaName = 'sqlfcisawitness'
 ### To be updated with your SA key!!! ###
 $witnessSaKey = '6QabCmN+38hBe48cl2STlQLnA3M5D2qixN7FKrkb5mr/KEVuFQyyW5vgANCwxP0y9iY/T+Bdo05l0olo3tK1sQ=='
@@ -16,7 +17,7 @@ Set-NetFirewallProfile -Profile Domain -Enabled False -CimSession $cimSession
 
 
 # Create WSFC 
-Test-Cluster -Node $sqlNodes –Include "Inventory", "Network", "System Configuration"
+Test-Cluster -Node $sqlNodes -Include "Inventory", "Network", "System Configuration"
 New-Cluster -Name $clusterName -Node $sqlNodes -NoStorage
 
 # Change cluster quorum configuration to storage account

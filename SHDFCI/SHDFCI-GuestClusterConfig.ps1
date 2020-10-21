@@ -1,5 +1,6 @@
 $clusterName = 'DemoClSHDFCI'
 
+### To be updated with your SA name!!! ###
 $witnessSaName = 'sqlfcisawitness'
 ### To be updated with your SA key!!! ###
 $witnessSaKey = '8555TwOeVqyPxfNZp/k2KTXsKBaYWVcqF+ZQhwwjY1SXFWmokkQLxYTUEx/TAe/xferGn9aDfpAtLkVI5BXo7w=='

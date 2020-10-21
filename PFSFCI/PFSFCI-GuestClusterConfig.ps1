@@ -2,6 +2,7 @@ $clusterName = 'DemoClPFSFCI'
 
 $ipAddr = '10.0.0.115'
 $probePort = '59990'
+### To be updated with your SA name!!! ###
 $witnessSaName = 'sqlfcisawitness'
 ### To be updated with your SA key!!! ###
 $witnessSaKey = '6QabCmN+38hBe48cl2STlQLnA3M5D2qixN7FKrkb5mr/KEVuFQyyW5vgANCwxP0y9iY/T+Bdo05l0olo3tK1sQ=='
